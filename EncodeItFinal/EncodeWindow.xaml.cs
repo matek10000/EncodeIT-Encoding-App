@@ -23,5 +23,18 @@ namespace EncodeItFinal
         {
             InitializeComponent();
         }
+
+        private void encode_but_Click(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem selectedEncode = (ComboBoxItem)encode_type.SelectedItem;
+            string selectedOption = selectedEncode.Content.ToString();
+
+            if(selectedOption == "Szyfr Cezara")
+            {
+                CezarEncode cezarencode = new CezarEncode();
+                cezarencode.Show();
+                this.Hide();
+            }
+        }
     }
 }
