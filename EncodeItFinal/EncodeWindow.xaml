@@ -10,7 +10,7 @@
         <Label x:Name="title_text" Content="EncodeIT" HorizontalAlignment="Center" Margin="0,10,0,0" Height="101" Width="316" FontSize="36" FontFamily="Wide Latin" VerticalAlignment="Top" Foreground="#FF888888"/>
         <ComboBox x:Name="encode_type" Width="200" Margin="300,217,300,168">
             <ComboBoxItem Content="Szyfr Cezara" />
-            <ComboBoxItem Content="Szyfr Vigenère'a" />
+            <ComboBoxItem Content="Szyfr Polibiusza" />
             <ComboBoxItem Content="Brak" />
             <ComboBoxItem Content="Brak" />
             <ComboBoxItem Content="Brak" />

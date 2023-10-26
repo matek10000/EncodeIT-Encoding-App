@@ -5,3 +5,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.1
 >Utworzenie repozytorium oraz rozpoczęcie dokumentacji projektu
+
+#v0.2
+>Wprowadzenie wstępnego designu strony głównej oraz funkcjonalność kodowania Szyfru Cezara
