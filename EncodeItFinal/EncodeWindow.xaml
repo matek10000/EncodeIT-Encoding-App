@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EncodeItFinal"
         mc:Ignorable="d"
-        Title="EncodeIT" Height="450" Width="800" Background="#FF1B1B1B" HorizontalAlignment="Center" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="EncodeIT" Height="450" Width="800" Background="#FF1B1B1B" HorizontalAlignment="Center" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/icon.ico">
     <Grid>
         
     </Grid>
