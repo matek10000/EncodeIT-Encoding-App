@@ -24,5 +24,19 @@ namespace EncodeItFinal
         {
             InitializeComponent();
         }
+
+        private void encode_but_Click(object sender, RoutedEventArgs e)
+        {
+            EncodeWindow encodewindow = new EncodeWindow();
+            encodewindow.Show();
+            this.Hide();
+        }
+
+        private void decode_but_Click(object sender, RoutedEventArgs e)
+        {
+            DecodeWindow decodewindow= new DecodeWindow();
+            decodewindow.Show();
+            this.Hide();
+        }
     }
 }
