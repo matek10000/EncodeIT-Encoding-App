@@ -8,6 +8,27 @@
         Title="EncodeIT" Height="450" Width="800" Background="#FF1B1B1B" HorizontalAlignment="Center" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/icon.ico">
     <Grid>
         <Label x:Name="title_text" Content="EncodeIT" HorizontalAlignment="Center" Margin="0,10,0,0" Height="101" Width="316" FontSize="36" FontFamily="Wide Latin" VerticalAlignment="Top" Foreground="#FF888888"/>
-        
+        <ComboBox x:Name="decode_type" Width="200" Margin="300,217,300,168">
+            <ComboBoxItem Content="Szyfr Cezara" />
+            <ComboBoxItem Content="Szyfr Polibiusza" />
+            <ComboBoxItem Content="Szyfr Homofoniczny" />
+            <ComboBoxItem Content="Brak" />
+            <ComboBoxItem Content="Brak" />
+            <ComboBoxItem Content="Brak" />
+            <ComboBoxItem Content="Brak" />
+            <ComboBoxItem Content="Brak" />
+
+            <ComboBox.Style>
+                <Style TargetType="ComboBox">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightGray" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ComboBox.Style>
+        </ComboBox>
+        <Label x:Name="title2_text" Content="Wybierz szyfr:" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top" Width="210" FontFamily="Wide Latin" Foreground="#FF888888" FontSize="16"/>
+        <Button x:Name="decode_but" Content="Wybierz" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Height="42" Width="146" FontFamily="Wide Latin" Click="decode_but_Click"/>
     </Grid>
 </Window>

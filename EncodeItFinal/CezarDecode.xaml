@@ -1,4 +1,4 @@
-﻿<Window x:Class="EncodeItFinal.CezarEncode"
+﻿<Window x:Class="EncodeItFinal.CezarDecode"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -18,7 +18,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="title3_text" Content="Tekst do zaszyfrowania:" HorizontalAlignment="Center" Margin="0,142,0,0" VerticalAlignment="Top" FontFamily="Wide Latin" Foreground="#FF888888"/>
+        <Label x:Name="title3_text" Content="Tekst do odszyfrowania:" HorizontalAlignment="Center" Margin="0,142,0,0" VerticalAlignment="Top" FontFamily="Wide Latin" Foreground="#FF888888"/>
 
         <Label x:Name="title4_text" Content="Przesuniecie (klucz):" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" FontFamily="Wide Latin" Foreground="#FF888888"/>
         <TextBox x:Name="cezar_text" HorizontalAlignment="Center" Margin="0,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="256" Height="18">
@@ -31,7 +31,7 @@
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <Button x:Name="cezar_but" Content="Szyfruj" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top" Height="36" Width="124" FontFamily="Wide Latin" FontWeight="Bold" Click="cezar_but_Click"/>
+        <Button x:Name="cezar_but" Content="Odszyfruj" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top" Height="36" Width="124" FontFamily="Wide Latin" FontWeight="Bold" Click="cezar_but_Click"/>
         <Label x:Name="cezar_result" Content="" IsHitTestVisible="True" Background="Transparent" HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Width="744" FontSize="22" Height="49" Foreground="White" FontFamily="Wide Latin"/>
         <Label x:Name="title5_text" Content="Wynik:" HorizontalAlignment="Left" Margin="10,332,0,0" VerticalAlignment="Top" FontFamily="Wide Latin" Foreground="#FF888888"/>
     </Grid>

@@ -15,31 +15,31 @@ using System.Windows.Shapes;
 namespace EncodeItFinal
 {
     /// <summary>
-    /// Logika interakcji dla klasy CezarEncode.xaml
+    /// Logika interakcji dla klasy CezarDecode.xaml
     /// </summary>
-    public partial class CezarEncode : Window
+    public partial class CezarDecode : Window
     {
-        public CezarEncode()
+        public CezarDecode()
         {
             InitializeComponent();
         }
 
         private void cezar_but_Click(object sender, RoutedEventArgs e)
         {
-            string input = cezar_text.Text.Replace(" ","");
-            if(int.TryParse(cezar_key.Text, out int input2))
+            string input = cezar_text.Text.Replace(" ", "");
+            if (int.TryParse(cezar_key.Text, out int input2))
             {
-                string result = CezarEncoder(input, input2);
+                string result = CezarDecoder(input, input2);
                 cezar_result.Content = result;
             }
             else
             {
                 MessageBox.Show("Błędnie podany klucz!");
                 return;
-            }  
+            }
         }
 
-        private string CezarEncoder(string input, int key)
+        private string CezarDecoder(string input, int key)
         {
             char[] inputArray = input.ToCharArray();
 
@@ -51,7 +51,7 @@ namespace EncodeItFinal
                 if (char.IsLetter(c))
                 {
                     int alphabetSize = char.IsUpper(c) ? 26 : 32;
-                    int index = (c - offset + key) % alphabetSize;
+                    int index = (c - offset - key) % alphabetSize;
 
                     if (index < 0) index += alphabetSize;
 

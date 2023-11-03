@@ -11,7 +11,7 @@
         <ComboBox x:Name="encode_type" Width="200" Margin="300,217,300,168">
             <ComboBoxItem Content="Szyfr Cezara" />
             <ComboBoxItem Content="Szyfr Polibiusza" />
-            <ComboBoxItem Content="Brak" />
+            <ComboBoxItem Content="Szyfr Homofoniczny" />
             <ComboBoxItem Content="Brak" />
             <ComboBoxItem Content="Brak" />
             <ComboBoxItem Content="Brak" />
