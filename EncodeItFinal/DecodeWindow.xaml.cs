@@ -35,6 +35,13 @@ namespace EncodeItFinal
                 cezardecode.Show();
                 this.Hide();
             }
+
+            if (selectedOption == "Szyfr Polibiusza")
+            {
+                PolibDecode polibdecode = new PolibDecode();
+                polibdecode.Show();
+                this.Hide();
+            }
         }
     }
 }

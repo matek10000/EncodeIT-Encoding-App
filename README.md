@@ -8,3 +8,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.2
 >Wprowadzenie wstępnego designu strony głównej oraz funkcjonalność kodowania Szyfru Cezara
+
+#v0.3
+>Wprowadzenie dekodowania Szyfru Cezara oraz pełną funkcjonalność Szyfru Polibiusza
