@@ -11,3 +11,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.3
 >Wprowadzenie dekodowania Szyfru Cezara oraz pełną funkcjonalność Szyfru Polibiusza
+
+#v0.4
+>Przebudowanie Szyfru Cezara, aby obsługiwał polskie znaki w dwie strony.

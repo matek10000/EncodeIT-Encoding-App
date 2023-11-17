@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace EncodeItFinal
 {
-    /// <summary>
-    /// Logika interakcji dla klasy CezarEncode.xaml
-    /// </summary>
     public partial class CezarEncode : Window
     {
         public CezarEncode()
@@ -26,41 +23,77 @@ namespace EncodeItFinal
 
         private void cezar_but_Click(object sender, RoutedEventArgs e)
         {
-            string input = cezar_text.Text.Replace(" ","");
-            if(int.TryParse(cezar_key.Text, out int input2))
+            string input = cezar_text.Text.Replace(" ", "");
+
+
+            if (int.TryParse(cezar_key.Text, out int input2))
             {
-                string result = CezarEncoder(input, input2);
+                string result = CezarEncoder(input, input2, dict);
                 cezar_result.Content = result;
             }
             else
             {
                 MessageBox.Show("Błędnie podany klucz!");
                 return;
-            }  
+            }
         }
 
-        private string CezarEncoder(string input, int key)
+        private string CezarEncoder(string input, int key, Dictionary<int, char> dict)
         {
             char[] inputArray = input.ToCharArray();
+            string wynik = "";
 
-            for (int i = 0; i < inputArray.Length; i++)
+            foreach (char letter in inputArray)
             {
-                char c = inputArray[i];
-                char offset = char.IsUpper(c) ? 'A' : 'a';
+                int id = dict.First(para => para.Value == letter).Key;
+                int index = (id + key + dict.Count) % dict.Count;
 
-                if (char.IsLetter(c))
+                if (index == 0)
                 {
-                    int alphabetSize = char.IsUpper(c) ? 26 : 32;
-                    int index = (c - offset + key) % alphabetSize;
-
-                    if (index < 0) index += alphabetSize;
-
-                    inputArray[i] = (char)(index + offset);
+                    wynik += dict[dict.Count];
+                }
+                else
+                {
+                    wynik += dict[index];
                 }
             }
-
-            return new string(inputArray);
+            return wynik;
         }
 
+        Dictionary<int, char> dict = new Dictionary<int, char>
+            {
+                {1, 'a'},
+                {2, 'ą'},
+                {3, 'b'},
+                {4, 'c'},
+                {5, 'ć'},
+                {6, 'd'},
+                {7, 'e'},
+                {8, 'ę'},
+                {9, 'f'},
+                {10, 'g'},
+                {11, 'h'},
+                {12, 'i'},
+                {13, 'j'},
+                {14, 'k'},
+                {15, 'l'},
+                {16, 'ł'},
+                {17, 'm'},
+                {18, 'n'},
+                {19, 'ń'},
+                {20, 'o'},
+                {21, 'ó'},
+                {22, 'p'},
+                {23, 'r'},
+                {24, 's'},
+                {25, 'ś'},
+                {26, 't'},
+                {27, 'u'},
+                {28, 'w'},
+                {29, 'y'},
+                {30, 'z'},
+                {31, 'ź'},
+                {32, 'ż'},
+            };
     }
 }

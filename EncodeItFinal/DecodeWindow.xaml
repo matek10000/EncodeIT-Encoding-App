@@ -12,7 +12,7 @@
             <ComboBoxItem Content="Szyfr Cezara" />
             <ComboBoxItem Content="Szyfr Polibiusza" />
             <ComboBoxItem Content="Szyfr Homofoniczny" />
-            <ComboBoxItem Content="Brak" />
+            <ComboBoxItem Content="Szyfr Tritemiusza" />
             <ComboBoxItem Content="Brak" />
             <ComboBoxItem Content="Brak" />
             <ComboBoxItem Content="Brak" />
