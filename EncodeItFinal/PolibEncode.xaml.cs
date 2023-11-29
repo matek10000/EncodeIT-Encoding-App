@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace EncodeItFinal
 {
-    /// <summary>
-    /// Logika interakcji dla klasy PolibEncode.xaml
-    /// </summary>
     public partial class PolibEncode : Window
     {
+        private readonly char[,] polibiusAlphabet = new char[5, 6]
+        {
+            { 'A', 'Ą', 'B', 'C', 'Ć', 'D' },
+            { 'E', 'Ę', 'F', 'G', 'H', 'I' },
+            { 'J', 'K', 'L', 'Ł', 'M', 'N' },
+            { 'O', 'Ó', 'P', 'R', 'S', 'Ś' },
+            { 'T', 'U', 'W', 'Y', 'Z', 'Ź' }
+        };
+
         public PolibEncode()
         {
             InitializeComponent();
@@ -33,17 +29,8 @@ namespace EncodeItFinal
 
         private string PolibEncoder(string input)
         {
-            char[,] polibiusTable = new char[5, 5]
-            {
-                { 'A', 'B', 'C', 'D', 'E' },
-                { 'F', 'G', 'H', 'I', 'K' },
-                { 'L', 'M', 'N', 'O', 'P' },
-                { 'Q', 'R', 'S', 'T', 'U' },
-                { 'V', 'W', 'X', 'Y', 'Z' }
-            };
-
             input = input.ToUpper();
-            string result = "";
+            StringBuilder result = new StringBuilder();
 
             foreach (char letter in input)
             {
@@ -51,22 +38,22 @@ namespace EncodeItFinal
                 {
                     for (int row = 0; row < 5; row++)
                     {
-                        for (int col = 0; col < 5; col++)
+                        for (int col = 0; col < 6; col++)
                         {
-                            if (polibiusTable[row, col] == letter)
+                            if (polibiusAlphabet[row, col] == letter)
                             {
-                                result += (row + 1).ToString() + (col + 1).ToString() + " ";
+                                result.Append((row + 1).ToString() + (col + 1).ToString() + " ");
                             }
                         }
                     }
                 }
                 else
                 {
-                    result += letter;
+                    result.Append(letter);
                 }
             }
 
-            return result.Trim();
+            return result.ToString().Trim();
         }
     }
 }

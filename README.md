@@ -14,3 +14,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.4
 >Przebudowanie Szyfru Cezara, aby obsługiwał polskie znaki w dwie strony.
+
+#v0.5
+>Przebudowanie Szyfru Polibiusza, aby obsługiwał polskie znaki w dwie strony.
