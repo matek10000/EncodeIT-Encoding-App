@@ -30,5 +30,6 @@
         </ComboBox>
         <Label x:Name="title2_text" Content="Wybierz szyfr:" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top" Width="210" FontFamily="Wide Latin" Foreground="#FF888888" FontSize="16"/>
         <Button x:Name="decode_but" Content="Wybierz" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Height="42" Width="146" FontFamily="Wide Latin" Click="decode_but_Click"/>
+        <Button x:Name="return_but" Content="Powrot" HorizontalAlignment="Left" Margin="640,10,0,0" VerticalAlignment="Top" Height="35" Width="123" FontFamily="Wide Latin" Click="return_but_Click"/>
     </Grid>
 </Window>

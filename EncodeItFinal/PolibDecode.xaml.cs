@@ -58,5 +58,12 @@ namespace EncodeItFinal
 
             return result.ToString();
         }
+
+        private void return_but_Click(object sender, RoutedEventArgs e)
+        {
+            DecodeWindow decodeWindow = new DecodeWindow();
+            decodeWindow.ShowDialog();
+            this.Hide();
+        }
     }
 }

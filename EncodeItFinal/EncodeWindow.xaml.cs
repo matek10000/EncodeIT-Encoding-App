@@ -43,5 +43,12 @@ namespace EncodeItFinal
                 this.Hide();
             }
         }
+
+        private void return_but_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Hide();
+        }
     }
 }

@@ -17,3 +17,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.5
 >Przebudowanie Szyfru Polibiusza, aby obsługiwał polskie znaki w dwie strony.
+
+#v0.5.1
+>Wprowadzenie przycisków powrotu do poprzedniego okna.

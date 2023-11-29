@@ -97,5 +97,12 @@ namespace EncodeItFinal
                 {31, 'ź'},
                 {32, 'ż'},
             };
+
+        private void return_but_Click(object sender, RoutedEventArgs e)
+        {
+            DecodeWindow decodeWindow = new DecodeWindow();
+            decodeWindow.Show();
+            this.Hide();
+        }
     }
 }

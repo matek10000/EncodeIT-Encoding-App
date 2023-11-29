@@ -55,5 +55,12 @@ namespace EncodeItFinal
 
             return result.ToString().Trim();
         }
+
+        private void return_but_Click(object sender, RoutedEventArgs e)
+        {
+            EncodeWindow encodeWindow = new EncodeWindow();
+            encodeWindow.Show();
+            this.Hide();
+        }
     }
 }
