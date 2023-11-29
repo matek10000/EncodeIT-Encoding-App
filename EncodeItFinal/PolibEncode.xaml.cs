@@ -42,7 +42,13 @@ namespace EncodeItFinal
                         {
                             if (polibiusAlphabet[row, col] == letter)
                             {
-                                result.Append((row + 1).ToString() + (col + 1).ToString() + " ");
+                                // Dodatkowe szyfrowanie poprzed obliczenia matematyczne.
+                                // Numer kolumny oraz wiersza zostają pomnożone * liczbę pi (3,14).
+                                // Jeśli liczba jest < 10 to dopisuje przed nią 0, tak aby każda liczba była dwucyfrowa.
+                                double squareResult = Math.Round((row + 1) * 3.14, 0);
+                                double colResult = Math.Round((col + 1) * 3.14, 0);
+
+                                result.Append((squareResult < 10 ? "0" : "") + squareResult + (colResult < 10 ? "0" : "") + colResult + " ");
                             }
                         }
                     }

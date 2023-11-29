@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using System.Windows;
 
 namespace EncodeItFinal
@@ -31,15 +32,17 @@ namespace EncodeItFinal
             input = input.Replace(" ", ""); // Usuń spacje, jeśli istnieją
             StringBuilder result = new StringBuilder();
 
-            for (int i = 0; i < input.Length; i += 2)
+            for (int i = 0; i < input.Length; i += 4)
             {
-                char rowChar = input[i];
-                char colChar = input[i + 1];
+                string squarePart = input.Substring(i, 2);
+                string colPart = input.Substring(i + 2, 2);
 
-                if (char.IsDigit(rowChar) && char.IsDigit(colChar))
+                if (int.TryParse(squarePart, out int square) && int.TryParse(colPart, out int col))
                 {
-                    int row = int.Parse(rowChar.ToString()) - 1;
-                    int col = int.Parse(colChar.ToString()) - 1;
+                    // Odszyfrowywanie operacji matematycznych
+                    // Dzielenie przez pi (3,14)
+                    int row = (int)Math.Round(square / 3.14) - 1;
+                    col = (int)Math.Round(col / 3.14) - 1;
 
                     if (row >= 0 && row < 5 && col >= 0 && col < 6)
                     {
@@ -48,11 +51,8 @@ namespace EncodeItFinal
                 }
                 else
                 {
-                    result.Append(rowChar); // Jeśli nie można odnaleźć w tabeli, dodaj znak niezmieniony
-                    if (char.IsDigit(colChar)) // Dodaj drugą cyfrę, jeśli jest cyfrą
-                    {
-                        result.Append(colChar);
-                    }
+                    result.Append(squarePart); // Jeśli nie można odnaleźć w tabeli, dodaj znak niezmieniony
+                    result.Append(colPart);
                 }
             }
 
@@ -62,7 +62,7 @@ namespace EncodeItFinal
         private void return_but_Click(object sender, RoutedEventArgs e)
         {
             DecodeWindow decodeWindow = new DecodeWindow();
-            decodeWindow.ShowDialog();
+            decodeWindow.Show();
             this.Hide();
         }
     }
