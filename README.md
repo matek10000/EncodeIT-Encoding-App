@@ -8,10 +8,12 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.2
 >Dodanie nowego szyfru *(kodowanie)* - **Szyfr Cezara**!
+
 >Wprowadzenie wstępnego design'u strony głównej.
 
 #v0.3
 >Dodanie nowego szyfru *(kodowanie/dekodowanie)* - **Szyfr Polibiusza**!
+
 >Dodanie nowego szyfru *(dekodowanie)* - **Szyfr Cezara**!
 
 #v0.4
@@ -28,4 +30,5 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.7
 >Dodanie nowego szyfru *(kodowanie/dekodowanie)* - **Szyfr Homofoniczny**!
+
 >Poprawienie alfabetu, który był obsługiwany w Szyfrze Polibiusza.
