@@ -8,11 +8,11 @@ namespace EncodeItFinal
     {
         private readonly char[,] polibiusAlphabet = new char[5, 7]
         {
-    { 'A', 'Ą', 'B', 'C', 'Ć', 'D', 'E' },
-    { 'F', 'G', 'H', 'I', 'J', 'K', 'L' },
-    { 'Ł', 'M', 'N', 'Ń', 'O', 'Ó', 'P' },
-    { 'R', 'S', 'Ś', 'T', 'U', 'W', 'Y' },
-    { 'Z', 'Ż', 'Ź', ' ', ' ', ' ', ' ' }
+            { 'A', 'Ą', 'B', 'C', 'Ć', 'D', 'E' },
+            { 'F', 'G', 'H', 'I', 'J', 'K', 'L' },
+            { 'Ł', 'M', 'N', 'Ń', 'O', 'Ó', 'P' },
+            { 'R', 'S', 'Ś', 'T', 'U', 'W', 'Y' },
+            { 'Z', 'Ż', 'Ź', ' ', ' ', ' ', ' ' }
         };
 
         public PolibEncode()

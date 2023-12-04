@@ -42,6 +42,13 @@ namespace EncodeItFinal
                 polibdecode.Show();
                 this.Hide();
             }
+
+            if (selectedOption == "Szyfr Homofoniczny")
+            {
+                HomoDecode homodecode = new HomoDecode();
+                homodecode.Show();
+                this.Hide();
+            }
         }
 
         private void return_but_Click(object sender, RoutedEventArgs e)
