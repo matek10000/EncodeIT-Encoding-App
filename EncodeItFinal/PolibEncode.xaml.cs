@@ -6,13 +6,13 @@ namespace EncodeItFinal
 {
     public partial class PolibEncode : Window
     {
-        private readonly char[,] polibiusAlphabet = new char[5, 6]
+        private readonly char[,] polibiusAlphabet = new char[5, 7]
         {
-            { 'A', 'Ą', 'B', 'C', 'Ć', 'D' },
-            { 'E', 'Ę', 'F', 'G', 'H', 'I' },
-            { 'J', 'K', 'L', 'Ł', 'M', 'N' },
-            { 'O', 'Ó', 'P', 'R', 'S', 'Ś' },
-            { 'T', 'U', 'W', 'Y', 'Z', 'Ź' }
+    { 'A', 'Ą', 'B', 'C', 'Ć', 'D', 'E' },
+    { 'F', 'G', 'H', 'I', 'J', 'K', 'L' },
+    { 'Ł', 'M', 'N', 'Ń', 'O', 'Ó', 'P' },
+    { 'R', 'S', 'Ś', 'T', 'U', 'W', 'Y' },
+    { 'Z', 'Ż', 'Ź', ' ', ' ', ' ', ' ' }
         };
 
         public PolibEncode()
@@ -38,7 +38,7 @@ namespace EncodeItFinal
                 {
                     for (int row = 0; row < 5; row++)
                     {
-                        for (int col = 0; col < 6; col++)
+                        for (int col = 0; col < 7; col++)
                         {
                             if (polibiusAlphabet[row, col] == letter)
                             {

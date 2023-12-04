@@ -22,4 +22,7 @@ Zakończenie projektu: xx.xx.xxxxr.
 >Wprowadzenie przycisków powrotu do poprzedniego okna.
 
 #v0.6
->Wprowadzenie dodatkowej opracji matematycznej do szyfrowania szyfrem Polibiusza.
+>Wprowadzenie dodatkowej operacji matematycznej do szyfrowania szyfrem Polibiusza.
+
+#v0.7
+>Poprawienie alfabetu używanego podczas szyfrowania Polibiusza.

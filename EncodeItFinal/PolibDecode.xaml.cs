@@ -6,13 +6,13 @@ namespace EncodeItFinal
 {
     public partial class PolibDecode : Window
     {
-        private readonly char[,] polibiusAlphabet = new char[5, 6]
+        private readonly char[,] polibiusAlphabet = new char[5, 7]
         {
-            { 'A', 'Ą', 'B', 'C', 'Ć', 'D' },
-            { 'E', 'Ę', 'F', 'G', 'H', 'I' },
-            { 'J', 'K', 'L', 'Ł', 'M', 'N' },
-            { 'O', 'Ó', 'P', 'R', 'S', 'Ś' },
-            { 'T', 'U', 'W', 'Y', 'Z', 'Ź' }
+            { 'A', 'Ą', 'B', 'C', 'Ć', 'D', 'E' },
+            { 'F', 'G', 'H', 'I', 'J', 'K', 'L' },
+            { 'Ł', 'M', 'N', 'Ń', 'O', 'Ó', 'P' },
+            { 'R', 'S', 'Ś', 'T', 'U', 'W', 'Y' },
+            { 'Z', 'Ż', 'Ź', ' ', ' ', ' ', ' ' }
         };
 
         public PolibDecode()
@@ -44,7 +44,7 @@ namespace EncodeItFinal
                     int row = (int)Math.Round(square / 3.14) - 1;
                     col = (int)Math.Round(col / 3.14) - 1;
 
-                    if (row >= 0 && row < 5 && col >= 0 && col < 6)
+                    if (row >= 0 && row < 5 && col >= 0 && col < 7)
                     {
                         result.Append(polibiusAlphabet[row, col]);
                     }
