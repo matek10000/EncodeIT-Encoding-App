@@ -32,3 +32,8 @@ Zakończenie projektu: xx.xx.xxxxr.
 >Dodanie nowego szyfru *(kodowanie/dekodowanie)* - **Szyfr Homofoniczny**!
 
 >Poprawienie alfabetu, który był obsługiwany w Szyfrze Polibiusza.
+
+#v0.8
+> Dodanie nowego szyfru *(kodowanie)* - **Szyfr Playfaira**!
+
+> Poprawki ogólne projektu
