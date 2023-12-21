@@ -12,11 +12,7 @@
             <ComboBoxItem Content="Szyfr Cezara" />
             <ComboBoxItem Content="Szyfr Polibiusza" />
             <ComboBoxItem Content="Szyfr Homofoniczny" />
-            <ComboBoxItem Content="Brak" />
-            <ComboBoxItem Content="Brak" />
-            <ComboBoxItem Content="Brak" />
-            <ComboBoxItem Content="Brak" />
-            <ComboBoxItem Content="Brak" />
+            <ComboBoxItem Content="Szyfr Playfaira" />
 
             <ComboBox.Style>
                 <Style TargetType="ComboBox">

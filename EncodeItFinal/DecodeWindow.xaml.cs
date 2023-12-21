@@ -49,6 +49,13 @@ namespace EncodeItFinal
                 homodecode.Show();
                 this.Hide();
             }
+
+            if (selectedOption == "Szyfr Playfaira")
+            {
+                PlayDecode playdecode = new PlayDecode();
+                playdecode.Show();
+                this.Hide();
+            }
         }
 
         private void return_but_Click(object sender, RoutedEventArgs e)
