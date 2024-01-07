@@ -48,43 +48,43 @@ namespace EncodeItFinal
         private string PlayfairDecipher(string input, char[,] matrix)
         {
             input = input.ToUpper();
-            string wynik = "";
+            string result = "";
 
             for (int i = 0; i < input.Length; i += 2)
             {
                 char char1 = input[i];
                 char char2 = (i + 1 < input.Length) ? input[i + 1] : 'X';
 
-                int[] pozycja1 = ZnajdzPozycje(char1, matrix);
-                int[] pozycja2 = ZnajdzPozycje(char2, matrix);
+                int[] position1 = FindPosition(char1, matrix);
+                int[] position2 = FindPosition(char2, matrix);
 
-                if (pozycja1[0] == pozycja2[0])
+                if (position1[0] == position2[0])
                 {
-                    wynik += matrix[pozycja1[0], (pozycja1[1] - 1 + matrix.GetLength(1)) % matrix.GetLength(1)];
-                    wynik += matrix[pozycja2[0], (pozycja2[1] - 1 + matrix.GetLength(1)) % matrix.GetLength(1)];
+                    result += matrix[position1[0], (position1[1] - 1 + matrix.GetLength(1)) % matrix.GetLength(1)];
+                    result += matrix[position2[0], (position2[1] - 1 + matrix.GetLength(1)) % matrix.GetLength(1)];
                 }
-                else if (pozycja1[1] == pozycja2[1])
+                else if (position1[1] == position2[1])
                 {
-                    wynik += matrix[(pozycja1[0] - 1 + matrix.GetLength(0)) % matrix.GetLength(0), pozycja1[1]];
-                    wynik += matrix[(pozycja2[0] - 1 + matrix.GetLength(0)) % matrix.GetLength(0), pozycja2[1]];
+                    result += matrix[(position1[0] - 1 + matrix.GetLength(0)) % matrix.GetLength(0), position1[1]];
+                    result += matrix[(position2[0] - 1 + matrix.GetLength(0)) % matrix.GetLength(0), position2[1]];
                 }
                 else
                 {
-                    wynik += matrix[pozycja1[0], (pozycja2[1] - 1 + matrix.GetLength(1)) % matrix.GetLength(1)];
-                    wynik += matrix[pozycja2[0], (pozycja1[1] - 1 + matrix.GetLength(1)) % matrix.GetLength(1)];
+                    result += matrix[position1[0], position2[1]];
+                    result += matrix[position2[0], position1[1]];
                 }
             }
 
-            return wynik;
+            return result;
         }
 
-        private int[] ZnajdzPozycje(char znak, char[,] matrix)
+        private int[] FindPosition(char character, char[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    if (matrix[i, j] == znak)
+                    if (matrix[i, j] == character)
                     {
                         return new int[] { i, j };
                     }
@@ -95,8 +95,8 @@ namespace EncodeItFinal
 
         private void return_but_Click(object sender, RoutedEventArgs e)
         {
-            DecodeWindow decodeWindow = new DecodeWindow();
-            decodeWindow.Show();
+            EncodeWindow encodeWindow = new EncodeWindow();
+            encodeWindow.Show();
             this.Hide();
         }
     }

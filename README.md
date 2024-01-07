@@ -37,3 +37,9 @@ Zakończenie projektu: xx.xx.xxxxr.
 > Dodanie nowego szyfru *(kodowanie)* - **Szyfr Playfaira**!
 
 > Poprawki ogólne projektu
+
+#v0.9
+> Ostateczne poprawki
+
+#v1.0
+> Oficjalna publikacja pierwszej wersji programu!

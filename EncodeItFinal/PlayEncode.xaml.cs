@@ -36,7 +36,7 @@ namespace EncodeItFinal
 
             if (!string.IsNullOrEmpty(input))
             {
-                string result = PlayfairCipher(input, matrix);
+                string result = PlayEncoder(input, matrix);
                 play_result.Content = result;
             }
             else
@@ -45,7 +45,7 @@ namespace EncodeItFinal
             }
         }
 
-        private string PlayfairCipher(string input, char[,] matrix)
+        private string PlayEncoder(string input, char[,] matrix)
         {
             input = input.ToUpper();
             string wynik = "";
